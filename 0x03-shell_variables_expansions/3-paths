@@ -1,0 +1,4 @@
+#!/bin/bash
+IFS=':' read -ra path_elements <<< "$PATH"
+num_directories="${#path_elements[@]}"
+echo "Number of directories in PATH: $num_directories"
