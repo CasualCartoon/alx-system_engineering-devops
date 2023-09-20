@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%x\n" "$DECIMAL"
+python -c "print(hex($DECIMAL)[2:])"
