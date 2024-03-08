@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Listen on port 98
+while true; do
+    nc -l -p 98 -q 1 <<<"Hello world"
+done
