@@ -1,6 +1,11 @@
 #!/bin/bash
 
-# Listen on port 98
 while true; do
-    nc -l -p 98 -q 1 <<<"Hello world"
+    echo "Hello world"
+    while IFS= read -r line; do
+        echo "$line"
+        if [[ "$line" == "test" ]]; then
+            break 2
+        fi
+    done | nc -l -p 98
 done
